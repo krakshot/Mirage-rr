@@ -1,0 +1,10 @@
+#pragma once
+#include "Il2CppDomain.h"
+#include "Il2CppThread.h"
+#include "Il2CppAssembly.h"
+#include "Il2CppImage.h"
+#include "Il2CppClass.h"
+#include "Il2CppMethod.h"
+#include "Il2CppField.h"
+#include "Il2CppObject.h"
+#include "Il2CppString.h"

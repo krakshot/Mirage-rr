@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{f995d9e9-cbcb-43f9-9457-f3db7caa8f09}</ProjectGuid>
+    <RootNamespace>Supremacy</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>main</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>..\..\! - Kernel Unity Injector\Misc\Mods</OutDir>
+    <IntDir>.\build\retards</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <VcpkgUseStatic>true</VcpkgUseStatic>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;SUPREMACY_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>$(IntDir)retspoofer.obj;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;SUPREMACY_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;SUPREMACY_EXPORTS;_WINDOWS;_USRDLL;IMGUI_DX11_SKIP_STATE_RESTORE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;NDEBUG;SUPREMACY_EXPORTS;_WINDOWS;_USRDLL;TEST;IMGUI_DEFINE_MATH_OPERATORS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <AdditionalIncludeDirectories>S:\cloak\RecRoom Internal\vendor\imgui;S:\cloak\RecRoom Internal\includes\unity;S:\cloak\RecRoom Internal\includes\unity\il2cpp;S:\cloak\RecRoom Internal\includes;S:\cloak\RecRoom Internal\vendor;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>d3d11.lib;$(IntDir)retspoofer.obj;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="includes\bypass\Bypass.cc" />
+    <ClCompile Include="includes\Types.cpp" />
+    <ClCompile Include="includes\unity\backend\main\bExports.cpp" />
+    <ClCompile Include="includes\unity\backend\main\tt_bridge.cpp" />
+    <ClCompile Include="includes\unity\il2cpp\il2cpp_utils.cpp" />
+    <ClCompile Include="includes\unity\il2cpp\struct\Il2CppAssembly.cpp" />
+    <ClCompile Include="includes\unity\il2cpp\struct\Il2CppClass.cpp" />
+    <ClCompile Include="includes\unity\il2cpp\struct\Il2CppDomain.cpp" />
+    <ClCompile Include="includes\unity\il2cpp\struct\Il2CppField.cpp" />
+    <ClCompile Include="includes\unity\il2cpp\struct\Il2CppImage.cpp" />
+    <ClCompile Include="includes\unity\il2cpp\struct\Il2CppMethod.cpp" />
+    <ClCompile Include="includes\unity\il2cpp\struct\Il2CppObject.cpp" />
+    <ClCompile Include="includes\unity\il2cpp\struct\Il2CppString.cpp" />
+    <ClCompile Include="includes\unity\il2cpp\struct\Il2CppThread.cpp" />
+    <ClCompile Include="includes\unity\memory.cc" />
+    <ClCompile Include="includes\unity\runtime.cc" />
+    <ClCompile Include="src\core\Application.cpp" />
+    <ClCompile Include="src\core\EntryPoint.cpp" />
+    <ClCompile Include="src\interface\drawing\helper.cc" />
+    <ClCompile Include="src\interface\drawing\widgets\Button.cc" />
+    <ClCompile Include="src\interface\drawing\widgets\Checkbox.cc" />
+    <ClCompile Include="src\interface\drawing\widgets\ColorEdit.cc" />
+    <ClCompile Include="src\interface\drawing\widgets\Combo.cc" />
+    <ClCompile Include="src\interface\drawing\widgets\DropBox.cc" />
+    <ClCompile Include="src\interface\drawing\widgets\InputText.cc" />
+    <ClCompile Include="src\interface\drawing\widgets\Listbox.cc" />
+    <ClCompile Include="src\interface\drawing\widgets\Particles.cc" />
+    <ClCompile Include="src\interface\drawing\widgets\ReorderList.cc" />
+    <ClCompile Include="src\interface\drawing\widgets\Scrollbar.cc" />
+    <ClCompile Include="src\interface\drawing\widgets\Select.cc" />
+    <ClCompile Include="src\interface\drawing\widgets\Slider.cc" />
+    <ClCompile Include="src\interface\drawing\widgets\Toast.cc" />
+    <ClCompile Include="src\interface\drawing\widgets\Watermark.cc" />
+    <ClCompile Include="src\interface\drawing\widgets\Window.cc" />
+    <ClCompile Include="src\interface\interface\gui.cc" />
+    <ClCompile Include="src\interface\ressources\font\font.cc" />
+    <ClCompile Include="src\interface\ressources\font_awesome.cpp" />
+    <ClCompile Include="src\render\DirectX11.cpp" />
+    <ClCompile Include="src\render\Overlay.cpp" />
+    <ClCompile Include="src\system\DirectX.cpp" />
+    <ClCompile Include="src\system\SYSWindow.cpp" />
+    <ClCompile Include="src\utils\CrashHandler.cpp" />
+    <ClCompile Include="src\utils\HookManager.cpp" />
+    <ClCompile Include="src\utils\logger\Logger.cpp" />
+    <ClCompile Include="vendor\imgui\imgui.cpp" />
+    <ClCompile Include="vendor\imgui\imgui_demo.cpp" />
+    <ClCompile Include="vendor\imgui\imgui_draw.cpp" />
+    <ClCompile Include="vendor\imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="vendor\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="vendor\imgui\imgui_tables.cpp" />
+    <ClCompile Include="vendor\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="vendor\kiero\kiero.cpp" />
+    <ClCompile Include="vendor\kiero\minhook\src\buffer.c" />
+    <ClCompile Include="vendor\kiero\minhook\src\hde\hde32.c" />
+    <ClCompile Include="vendor\kiero\minhook\src\hde\hde64.c" />
+    <ClCompile Include="vendor\kiero\minhook\src\hook.c" />
+    <ClCompile Include="vendor\kiero\minhook\src\trampoline.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="includes\bypass\Bypass.hh" />
+    <ClInclude Include="includes\driver\km.h" />
+    <ClInclude Include="includes\driver\shared.h" />
+    <ClInclude Include="includes\unity\backend\main\bExports.h" />
+    <ClInclude Include="includes\unity\backend\main\patterns.h" />
+    <ClInclude Include="includes\unity\backend\main\tt_bridge.h" />
+    <ClInclude Include="includes\unity\il2cpp\helpers\class.h" />
+    <ClInclude Include="includes\unity\il2cpp\helpers\field.h" />
+    <ClInclude Include="includes\unity\il2cpp\helpers\helpers.h" />
+    <ClInclude Include="includes\unity\il2cpp\helpers\method.h" />
+    <ClInclude Include="includes\unity\il2cpp\il2cpp_utils.h" />
+    <ClInclude Include="includes\unity\il2cpp\struct\il2cpp.h" />
+    <ClInclude Include="includes\unity\il2cpp\struct\Il2CppAssembly.h" />
+    <ClInclude Include="includes\unity\il2cpp\struct\Il2CppClass.h" />
+    <ClInclude Include="includes\unity\il2cpp\struct\Il2CppDomain.h" />
+    <ClInclude Include="includes\unity\il2cpp\struct\Il2CppField.h" />
+    <ClInclude Include="includes\unity\il2cpp\struct\Il2CppImage.h" />
+    <ClInclude Include="includes\unity\il2cpp\struct\Il2CppMethod.h" />
+    <ClInclude Include="includes\unity\il2cpp\struct\Il2CppObject.h" />
+    <ClInclude Include="includes\unity\il2cpp\struct\Il2CppString.h" />
+    <ClInclude Include="includes\unity\il2cpp\struct\Il2CppThread.h" />
+    <ClInclude Include="includes\unity\memory.hh" />
+    <ClInclude Include="includes\unity\runtime.hh" />
+    <ClInclude Include="includes\unity\structs\mono\array.h" />
+    <ClInclude Include="includes\unity\structs\mono\mono_structs.h" />
+    <ClInclude Include="includes\unity\structs\mono\string.h" />
+    <ClInclude Include="includes\unity\structs\unity\matrix.h" />
+    <ClInclude Include="includes\unity\structs\unity\quaternion.h" />
+    <ClInclude Include="includes\unity\structs\unity\unity_structs.h" />
+    <ClInclude Include="includes\unity\structs\unity\vector2.h" />
+    <ClInclude Include="includes\unity\structs\unity\vector3.h" />
+    <ClInclude Include="src\core\Application.hpp" />
+    <ClInclude Include="src\core\EntryPoint.hpp" />
+    <ClInclude Include="includes\Types.hpp" />
+    <ClInclude Include="src\interface\drawing\helper.hh" />
+    <ClInclude Include="src\interface\drawing\widgets\widgets.hh" />
+    <ClInclude Include="src\interface\interface\gui.hh" />
+    <ClInclude Include="src\interface\interface\sets\Colors.hh" />
+    <ClInclude Include="src\interface\ressources\data.h" />
+    <ClInclude Include="src\interface\ressources\font\font.hh" />
+    <ClInclude Include="src\interface\ressources\font_awesome.h" />
+    <ClInclude Include="src\render\DirectX11.hpp" />
+    <ClInclude Include="src\render\Overlay.hpp" />
+    <ClInclude Include="src\system\DirectX.hpp" />
+    <ClInclude Include="src\system\SYSWindow.hpp" />
+    <ClInclude Include="src\utils\CrashHandler.hpp" />
+    <ClInclude Include="src\utils\HookManager.hpp" />
+    <ClInclude Include="src\utils\logger\Logger.hpp" />
+    <ClInclude Include="vendor\imgui\imconfig.h" />
+    <ClInclude Include="vendor\imgui\imgui.h" />
+    <ClInclude Include="vendor\imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="vendor\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="vendor\imgui\imgui_internal.h" />
+    <ClInclude Include="vendor\imgui\imstb_rectpack.h" />
+    <ClInclude Include="vendor\imgui\imstb_textedit.h" />
+    <ClInclude Include="vendor\imgui\imstb_truetype.h" />
+    <ClInclude Include="vendor\kiero\kiero.h" />
+    <ClInclude Include="vendor\kiero\minhook\include\MinHook.h" />
+    <ClInclude Include="vendor\kiero\minhook\src\buffer.h" />
+    <ClInclude Include="vendor\kiero\minhook\src\hde\hde32.h" />
+    <ClInclude Include="vendor\kiero\minhook\src\hde\hde64.h" />
+    <ClInclude Include="vendor\kiero\minhook\src\hde\pstdint.h" />
+    <ClInclude Include="vendor\kiero\minhook\src\hde\table32.h" />
+    <ClInclude Include="vendor\kiero\minhook\src\hde\table64.h" />
+    <ClInclude Include="vendor\kiero\minhook\src\trampoline.h" />
+    <ClInclude Include="vendor\retspoofer\retspoofer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="vendor\kiero\minhook\dll_resources\MinHook.def" />
+    <MasM Include="vendor\retspoofer\retspoofer.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="vendor\kiero\minhook\dll_resources\MinHook.rc" />
+  </ItemGroup>
+  <Target Name="CheckMASM" BeforeTargets="Build" Condition="'$(Platform)'=='x64'">
+    <Message Text="Checking for MASM (ml64.exe) in PATH..." Importance="High" />
+    <Exec Command="where ml64.exe" />
+  </Target>
+  <!-- Assemble retspoofer.asm into an object before linking (x64 only) -->
+  <Target Name="AssembleRetspoofer" BeforeTargets="Link" Condition="'$(Platform)'=='x64'">
+    <Message Text="Assembling vendor\retspoofer\retspoofer.asm with ml64.exe..." Importance="High" />
+    <MakeDir Directories="$(IntDir)" />
+    <Exec Command="ml64.exe /c /Fo&quot;$(IntDir)retspoofer.obj&quot; &quot;$(ProjectDir)vendor\retspoofer\retspoofer.asm&quot;" IgnoreExitCode="false">
+      <Output TaskParameter="ExitCode" PropertyName="ML64ExitCode" />
+    </Exec>
+    <Error Condition="'$(ML64ExitCode)' != '0'" Text="ml64.exe failed assembling retspoofer.asm (exit code $(ML64ExitCode)). Make sure MASM is installed and on PATH." />
+  </Target>
+  <!-- Ensure the assembled object is passed to the linker for x64 builds -->
+  <PropertyGroup Condition="'$(Platform)'=='x64'">
+    <AdditionalDependencies>$(IntDir)retspoofer.obj;%(AdditionalDependencies)</AdditionalDependencies>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
